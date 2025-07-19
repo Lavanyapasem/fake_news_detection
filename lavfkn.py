@@ -9,7 +9,6 @@ import pandas as pd
 import os
 from bs4 import BeautifulSoup
 import json
-
 # Configure the page
 st.set_page_config(
     page_title="Fake News Detective",
@@ -338,18 +337,7 @@ def display_analysis_results(analysis_data, source_info=None):
     
     # Display metrics
     st.subheader("📊 Analysis Results")
-    col1, col2, col3, col4 = st.columns(4)
-    
-    with col1:
-        st.metric("Credibility Score", f"{score}/100")
-    with col2:
-        st.metric("Classification", classification)
-    with col3:
-        confidence = "High" if score > 80 or score < 20 else "Low" if 20 <= score <= 80 else "Medium"
-        st.metric("Confidence", confidence)
-    with col4:
-        risk_level = "High Risk" if score < 30 else "Medium Risk" if score < 70 else "Low Risk"
-        st.metric("Risk Level", risk_level)
+  
     
     # Result box with appropriate styling
     if classification == "Fake News":
