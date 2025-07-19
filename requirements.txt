@@ -1,6 +1,7 @@
 streamlit
 google-generativeai
-bs4
 requests
-markdown
-numpy
+beautifulsoup4
+pandas
+PyMuPDF
+
